@@ -12,7 +12,7 @@ const App = () => (
             <p className="t2 s-mb-0">Título del banner</p>
             <p> Subtítulo del banner</p>
             <a href="https://google.com" className="button">
-              Botón del banner
+              Botón del banner este es un cambio
             </a>
           </div>
         </div>
