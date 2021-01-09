@@ -1,5 +1,9 @@
 import React from "react";
 
+const mayorDeEdad = (edad) => edad > 18;
+
+const persona = { nombre: "Patricio", apellido: "Polito", edad: 34 };
+
 const Curso = () => (
   <>
     <article className="card">
@@ -7,21 +11,18 @@ const Curso = () => (
         <img src="https://ux.ed.team/img/curso-portada.png" alt="" />
       </div>
       <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-        <h3 className="t5 s-mb-2 s-center">
-          Programación orientada a objetos con Go
-        </h3>
-        <div className="s-mb-2 s-main-center">
-          <div className="card__teacher s-cross-center">
-            <div className="card__avatar s-mr-1">
-              <div className="circle img-container">
-                <img src="https://ux.ed.team/img/profesor.jpg" alt="" />
-              </div>
-            </div>
-            <span className="small">Alexys Lozada</span>
-          </div>
-        </div>
+        {mayorDeEdad(persona.edad) ? (
+            <h3 className="center">
+             Hola, soy mayor
+            </h3>
+        ) : (
+          <p>soy menor</p>
+        )}
         <div className="s-main-center">
-          <a className="button--ghost-alert button--tiny" href="#">
+          <a
+            className="button--ghost-alert button--tiny"
+            href="http://google.com"
+          >
             $ 20USD
           </a>
         </div>
