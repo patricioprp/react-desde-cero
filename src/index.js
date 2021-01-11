@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "../src/components/App";
 
 const root = document.getElementById("root");
 ///////////////////////// sin jsx, o sea con js puro///////////////////////////////////////
