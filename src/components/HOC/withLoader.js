@@ -1,13 +1,9 @@
 //este es un compente de orden superior es una funcion que recibe un componente y retorna otro componente
 //es una funcion que retorna una clase
-import React,{Component} from "react"
+import React, { Component } from "react"
 
-const withLoader = (propValue, WrappedComponent) => {
+const withLoader = (propValue) => (WrappedComponent) => {
     return class WithLoader extends Component {
-
-        constructor(props){
-            super(props)
-        }
 
         render() {
             return  this.props[propValue].length === 0
@@ -18,4 +14,4 @@ const withLoader = (propValue, WrappedComponent) => {
     }
 }
 
-export default withLoader
+export default  withLoader

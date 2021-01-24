@@ -2,10 +2,10 @@ import React from 'react';
 import CourseCard from "../Molecules/CourseCard"
 import withLoader from "../HOC/withLoader"
 
-const CourseGrid = ({course}) => (
+const CourseGrid = ({courses}) => (
     <div className="ed-grid m-grid-4">
     {
-    course.map((c) => (
+    courses.map(c => (
       <CourseCard
        key={c.id}
        id={c.id}
@@ -14,7 +14,8 @@ const CourseGrid = ({course}) => (
        price={c.price}
        professor={c.professor}
         />
-    ))}
+    ))
+    }
   </div>
 )
 export default withLoader("courses")(CourseGrid)
